@@ -5,4 +5,4 @@ pandas_datareader
 matplotlib
 xlrd
 seaborn
-pycaret
+pycaret==1.0.0
