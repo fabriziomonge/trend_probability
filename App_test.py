@@ -34,20 +34,16 @@ try:
 
     if Psw == accessi['Password'][Utente]:
 
-        ticker = st.text_input("Inserire il ticker da analizzare", "VTI")
-
-
-        st.sidebar.markdown("""Nel caso in cui la somma delle opzioni non sia pari a 100 il programma ribasa il portafoglio al 100% in proporzione ai dati inseriti""") 
-    
+        ticker = st.text_input("Inserire il ticker da analizzare", "VTI")   
     else:
         st.write("""
-           In caso di utilizzo senza credenziali non sarà possibile modificare i pesi delle asset in portafoglio.
+           In caso di utilizzo senza credenziali non sarà possibile modificare l'asset oggetto di studio.
     """)
         ticker = ("VTI")
 except:
     
     st.write("""
-       In caso di utilizzo senza credenziali non sarà possibile modificare i pesi delle asset in portafoglio.
+       In caso di utilizzo senza credenziali non sarà possibile modificare l'asset oggetto di analisi.
     """)
     ticker = ("VTI")
 
@@ -112,7 +108,7 @@ df = df.drop('diff',1)
 
 
 exp_clf101 = setup(data = df, target = 'risk', feature_selection=False, ignore_features = ['Close'], session_id=123, silent=True)
-
+rf = create_model('rf', fold = 5)
 
 # In[ ]:
 
