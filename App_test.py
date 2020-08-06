@@ -105,7 +105,7 @@ df = df.drop('diff',1)
 # In[39]:
 
 
-df
+
 
 
 # In[41]:
