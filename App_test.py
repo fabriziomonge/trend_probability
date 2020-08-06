@@ -15,10 +15,10 @@ import pandas_datareader as pdr
 
 
 #controllo accessi
-url = "https://github.com/fabriziomonge/applicazione1/blob/master/Accessi.xlsx"
+
+url = 'http://www.sphereresearch.net/Notebooks/Accessi.xlsx'
 accessi = pd.read_excel(url)
 accessi = accessi.set_index('User', drop = True)
-
 
 # In[4]:
 
