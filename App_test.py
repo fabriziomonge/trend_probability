@@ -15,7 +15,8 @@ import pandas_datareader as pdr
 
 
 #controllo accessi
-accessi = pd.read_excel('Accessi.xlsx')
+url = "https://github.com/fabriziomonge/applicazione1/blob/master/Accessi.xlsx"
+accessi = pd.read_excel(url)
 accessi = accessi.set_index('User', drop = True)
 
 
